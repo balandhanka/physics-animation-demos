@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Charges & Fields – Interactive Physics Animations</title>
+    <meta name="description"
+        content="Interactive animated demonstrations of every concept in NCERT 12th Physics Chapter 1: Electric Charges and Fields">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0-beta.99.1/lib/anime.iife.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <div>
+                    <h1>PhysicsViz</h1>
+                    <p class="subtitle">Chapter 1 · Electric Charges & Fields</p>
+                </div>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="nav-list" id="navList">
+            <div class="nav-section-title">Electrostatics Basics</div>
+            <a href="#" class="nav-item active" data-anim="charging-friction">
+                <span class="nav-num">01</span>
+                <span class="nav-label">Charging by Friction</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="electroscope">
+                <span class="nav-num">02</span>
+                <span class="nav-label">Gold-Leaf Electroscope</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="charging-induction">
+                <span class="nav-num">03</span>
+                <span class="nav-label">Charging by Induction</span>
+            </a>
+
+            <div class="nav-section-title">Forces & Fields</div>
+            <a href="#" class="nav-item" data-anim="coulombs-law">
+                <span class="nav-num">04</span>
+                <span class="nav-label">Coulomb's Law</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="superposition">
+                <span class="nav-num">05</span>
+                <span class="nav-label">Superposition Principle</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="electric-field">
+                <span class="nav-num">06</span>
+                <span class="nav-label">Electric Field</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="field-lines">
+                <span class="nav-num">07</span>
+                <span class="nav-label">Electric Field Lines</span>
+            </a>
+
+            <div class="nav-section-title">Flux & Dipoles</div>
+            <a href="#" class="nav-item" data-anim="electric-flux">
+                <span class="nav-num">08</span>
+                <span class="nav-label">Electric Flux</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="electric-dipole">
+                <span class="nav-num">09</span>
+                <span class="nav-label">Electric Dipole</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="dipole-in-field">
+                <span class="nav-num">10</span>
+                <span class="nav-label">Dipole in Uniform Field</span>
+            </a>
+
+            <div class="nav-section-title">Gauss's Law</div>
+            <a href="#" class="nav-item" data-anim="gauss-law">
+                <span class="nav-num">11</span>
+                <span class="nav-label">Gauss's Law</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="infinite-wire">
+                <span class="nav-num">12</span>
+                <span class="nav-label">Field of Infinite Wire</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="infinite-plane">
+                <span class="nav-num">13</span>
+                <span class="nav-label">Field of Infinite Plane</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="spherical-shell">
+                <span class="nav-num">14</span>
+                <span class="nav-label">Spherical Shell</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <div class="animation-header">
+            <div class="anim-title-area">
+                <h2 id="animTitle">Charging by Friction</h2>
+                <p id="animDescription" class="anim-description">Rub a glass rod with silk to transfer charges. Like
+                    charges repel, unlike charges attract.</p>
+            </div>
+            <div class="anim-controls" id="animControls"></div>
+        </div>
+
+        <div class="canvas-wrapper" id="canvasWrapper">
+            <canvas id="animCanvas"></canvas>
+        </div>
+
+        <div class="info-panel" id="infoPanel">
+            <div class="formula-card" id="formulaCard"></div>
+            <div class="concept-card" id="conceptCard"></div>
+        </div>
+    </main>
+
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>
