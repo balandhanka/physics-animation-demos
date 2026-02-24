@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciViz – Interactive Science Animations</title>
+    <meta name="description"
+        content="Interactive animated demonstrations for NCERT Science — Physics & Biology chapters with beautiful visualizations">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0-beta.99.1/lib/anime.iife.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="landing-body">
+    <div class="landing-container">
+        <header class="landing-header">
+            <div class="landing-logo">
+                <span class="landing-logo-icon">🔬</span>
+                <div>
+                    <h1 class="landing-title">SciViz</h1>
+                    <p class="landing-subtitle">Interactive Science Animations</p>
+                </div>
+            </div>
+        </header>
+
+        <p class="landing-intro">Choose a chapter to explore interactive visualizations of every concept.</p>
+
+        <div class="chapter-grid">
+            <!-- Physics Card -->
+            <a href="index.html" class="chapter-card chapter-card--physics" id="physicsCard">
+                <div class="chapter-card-icon">⚡</div>
+                <div class="chapter-card-body">
+                    <span class="chapter-badge">Physics · Class 12</span>
+                    <h2>Electric Charges &amp; Fields</h2>
+                    <p>Coulomb's law, electric field lines, Gauss's law, dipoles, and more — 14 interactive demos.</p>
+                </div>
+                <div class="chapter-card-arrow">→</div>
+            </a>
+
+            <!-- Biology Card -->
+            <a href="biology.html" class="chapter-card chapter-card--biology" id="biologyCard">
+                <div class="chapter-card-icon">🧬</div>
+                <div class="chapter-card-body">
+                    <span class="chapter-badge">Biology · Class 11</span>
+                    <h2>Biological Classification</h2>
+                    <p>Five kingdoms, bacteria, protista, fungi, viruses, lichens — 14 interactive demos.</p>
+                </div>
+                <div class="chapter-card-arrow">→</div>
+            </a>
+        </div>
+
+        <footer class="landing-footer">
+            <p>Built for NCERT learners · Animated with ❤️</p>
+        </footer>
+    </div>
+
+    <script>
+        // Animate cards on load
+        if (typeof anime !== 'undefined') {
+            anime({
+                targets: '.landing-logo-icon',
+                scale: [0.4, 1],
+                opacity: [0, 1],
+                rotate: ['-20deg', '0deg'],
+                duration: 700,
+                easing: 'easeOutBack'
+            });
+            anime({
+                targets: '.landing-title, .landing-subtitle',
+                opacity: [0, 1],
+                translateY: [-12, 0],
+                duration: 500,
+                delay: function (el, i) { return 200 + i * 120; },
+                easing: 'easeOutCubic'
+            });
+            anime({
+                targets: '.landing-intro',
+                opacity: [0, 1],
+                translateY: [10, 0],
+                duration: 500,
+                delay: 400,
+                easing: 'easeOutCubic'
+            });
+            anime({
+                targets: '.chapter-card',
+                opacity: [0, 1],
+                translateY: [30, 0],
+                scale: [0.96, 1],
+                duration: 600,
+                delay: function (el, i) { return 500 + i * 150; },
+                easing: 'easeOutCubic'
+            });
+            anime({
+                targets: '.landing-footer',
+                opacity: [0, 1],
+                duration: 600,
+                delay: 900,
+                easing: 'easeOutCubic'
+            });
+        }
+    </script>
+</body>
+
+</html>

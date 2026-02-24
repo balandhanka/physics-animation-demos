@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biological Classification – Interactive Biology Animations</title>
+    <meta name="description"
+        content="Interactive animated demonstrations of every concept in NCERT 11th Biology Chapter 2: Biological Classification">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0-beta.99.1/lib/anime.iife.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bio-theme">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <a href="landing.html" class="back-link" title="Back to chapters">←</a>
+                <span class="logo-icon">🧬</span>
+                <div>
+                    <h1>BioViz</h1>
+                    <p class="subtitle">Chapter 2 · Biological Classification</p>
+                </div>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="nav-list" id="navList">
+            <div class="nav-section-title">Kingdom Monera</div>
+            <a href="#" class="nav-item active" data-anim="kingdom-monera">
+                <span class="nav-num">01</span>
+                <span class="nav-label">Bacteria Shapes</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="archaebacteria">
+                <span class="nav-num">02</span>
+                <span class="nav-label">Archaebacteria</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="eubacteria">
+                <span class="nav-num">03</span>
+                <span class="nav-label">Eubacteria & Cyanobacteria</span>
+            </a>
+
+            <div class="nav-section-title">Kingdom Protista</div>
+            <a href="#" class="nav-item" data-anim="chrysophytes">
+                <span class="nav-num">04</span>
+                <span class="nav-label">Chrysophytes & Diatoms</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="dinoflagellates">
+                <span class="nav-num">05</span>
+                <span class="nav-label">Dinoflagellates</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="euglenoids">
+                <span class="nav-num">06</span>
+                <span class="nav-label">Euglenoids</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="slime-moulds">
+                <span class="nav-num">07</span>
+                <span class="nav-label">Slime Moulds</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="protozoans">
+                <span class="nav-num">08</span>
+                <span class="nav-label">Protozoans</span>
+            </a>
+
+            <div class="nav-section-title">Kingdom Fungi</div>
+            <a href="#" class="nav-item" data-anim="kingdom-fungi">
+                <span class="nav-num">09</span>
+                <span class="nav-label">Fungi Structure</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="fungi-classes">
+                <span class="nav-num">10</span>
+                <span class="nav-label">Classes of Fungi</span>
+            </a>
+
+            <div class="nav-section-title">Higher Kingdoms</div>
+            <a href="#" class="nav-item" data-anim="kingdom-plantae">
+                <span class="nav-num">11</span>
+                <span class="nav-label">Kingdom Plantae</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="kingdom-animalia">
+                <span class="nav-num">12</span>
+                <span class="nav-label">Kingdom Animalia</span>
+            </a>
+
+            <div class="nav-section-title">Microorganisms</div>
+            <a href="#" class="nav-item" data-anim="viruses">
+                <span class="nav-num">13</span>
+                <span class="nav-label">Viruses</span>
+            </a>
+            <a href="#" class="nav-item" data-anim="viroids-prions-lichens">
+                <span class="nav-num">14</span>
+                <span class="nav-label">Viroids, Prions & Lichens</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <div class="animation-header">
+            <div class="anim-title-area">
+                <h2 id="animTitle">Bacteria Shapes</h2>
+                <p id="animDescription" class="anim-description">Explore the four basic shapes of bacteria: cocci,
+                    bacilli, vibrio, and spirilla.</p>
+            </div>
+            <div class="anim-controls" id="animControls"></div>
+        </div>
+
+        <div class="canvas-wrapper" id="canvasWrapper">
+            <canvas id="animCanvas"></canvas>
+        </div>
+
+        <div class="info-panel" id="infoPanel">
+            <div class="formula-card" id="formulaCard"></div>
+            <div class="concept-card" id="conceptCard"></div>
+        </div>
+    </main>
+
+    <script src="bio-app.js" type="module"></script>
+</body>
+
+</html>
